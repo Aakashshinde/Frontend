@@ -1,0 +1,41 @@
+ul{
+    padding: 0;
+}
+h2{
+    margin-top: .5em;
+    padding-top: 0;
+}
+.regimgstyle{
+    max-height: 50vh;
+    max-width: 50vh;
+    display: grid;
+    place-items: center;
+}
+.regpaperStyle{
+    height: 60vh;
+    width: 50vh;
+    display: grid;
+    justify-content: center;
+}
+.regh2-2{
+    margin-bottom: -100vh;
+}
+.regh2-1{
+    margin-top: .5em;
+    padding-top: 0;
+}
+.registerpage{
+    display: grid;
+    place-items: center;
+    min-height: 92vh;
+}
+.reguser{
+    margin:"100px auto";
+}
+.regpass{
+    margin:"8px 0";
+}
+.regbtstyle{
+    padding: 0;
+    margin:"100px 0";
+}

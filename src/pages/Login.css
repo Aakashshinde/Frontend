@@ -1,0 +1,37 @@
+ul{
+    padding: 0;
+}
+.imgstyle{
+    max-height: 50vh;
+    max-width: 50vh;
+    display: grid;
+    place-items: center;
+}
+.paperStyle{
+    height: 60vh;
+    width: 50vh;
+    display: grid;
+    justify-content: center;
+}
+.loginh2-2{
+    margin-bottom: -100vh;
+}
+.loginh2-1{
+    display: grid;
+    place-items: center;
+}
+.loginpage{
+    display: grid;
+    place-items: center;
+    min-height: 92vh;
+}
+.loginuser{
+    margin:"100px auto";
+}
+.loginpass{
+    margin:"8px 0";
+}
+.btstyle{
+    padding: 0;
+    margin:"100px 0";
+}
