@@ -58,7 +58,6 @@ function SingleRoom(props) {
    
   };
   const {user} = useContext(AuthContext)
-
   return (
     <Grid.Row columns={3}>
       <Grid.Row>
@@ -77,7 +76,12 @@ function SingleRoom(props) {
                   <br></br>
                   <br></br>
                   {(localStorage.getItem(roomId)==getRoom.questions.length) && <RoomSolved  room={getRoom}/>}
+                {getRoom.users.map((users)=>{
+                  if(user.username===users.username){
+                      return <RoomSolved  room={getRoom}/>
 
+                  }
+                })}
                 {getRoom.questions.map((room) => (
                   <Grid.Column   key={room.id}>
                     <span><strong><h3>{room.name}  </h3> </strong></span>
