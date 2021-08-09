@@ -1,10 +1,10 @@
-import React,{useContext,useState} from 'react'
+import React,{useState} from 'react'
 import {Button, Form} from 'semantic-ui-react'
 import { useMutation} from 'react-apollo'
 import gql from 'graphql-tag'
 import {FETCH_POSTS_QUERY} from '../util/graphql'
 function PostForm(props){
-      const [errors,setErrors] = useState({})
+     // const [errors,setErrors] = useState({})
      const [values,setValues] = useState({
          body: ''
      })
@@ -15,7 +15,7 @@ function PostForm(props){
          event.preventDefault()
          createPost()
      }
-    const [createPost,{error}] = useMutation(CREATE_POST_MUTATION,{
+    const [createPost] = useMutation(CREATE_POST_MUTATION,{
         variables: values,
         update(proxy,result){
             const data=proxy.readQuery({

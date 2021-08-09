@@ -3,8 +3,8 @@ import {gql} from 'graphql-tag'
 import {Button,Icon} from 'semantic-ui-react'
 import {useMutation} from 'react-apollo'
 
-function DeleteRoom(roomId){
-    var roomId = roomId.roomId
+function DeleteRoom(roomid){
+    var roomId = roomid.roomId
     const [DeleteRoom] = useMutation(DELETE_ROOM,{
         update(){
 

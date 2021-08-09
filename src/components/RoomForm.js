@@ -1,4 +1,4 @@
-import React,{useContext,useState} from 'react'
+import React,{useState} from 'react'
 import {Button, Form} from 'semantic-ui-react'
 import { useMutation} from 'react-apollo'
 import gql from 'graphql-tag'
@@ -13,7 +13,7 @@ function RoomForm(){
     const onSubmit = (event)=>{
         createRoom()
     }
-   const [createRoom,{error}] = useMutation(CREATE_ROOM_MUTATION,{
+   const [createRoom] = useMutation(CREATE_ROOM_MUTATION,{
        variables: values,
        update(_,result){
            console.log(result)

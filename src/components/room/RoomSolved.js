@@ -11,7 +11,7 @@ function RoomSolved(props){
     var roomId=room.id
     var f=0;
     const user = useContext(AuthContext);
-    const [values,setValues] = useState({
+    const [values] = useState({
       roomId: roomId
       })
       const onSubmit = (event)=>{
@@ -31,7 +31,7 @@ function RoomSolved(props){
    const [addusertoroom,{error}] = useMutation(ADD_USER_MUTATION,{
       variables: values,
       update(_,result){
-          console.log("added room",result)
+         
       } ,
       if(error){
         console.log('error')

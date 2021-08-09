@@ -20,6 +20,7 @@ function Login(props){
      const [loginuser,{loading}] = useMutation(LOGIN_USER,{
          update(_,result){
             context.login(result.data.login)
+            if(loading) console.log("loading")
              props.history.push('/')
          },
          onError(err){
@@ -31,12 +32,12 @@ function Login(props){
              password: values.password
          }
      })
-     const loginpage={}
+   //  const loginpage={}
      const btStyle={margin:"2px 2px 20px 5px",maxWidth: '70px', maxHeight: '30px', minWidth: '70px', minHeight: '30px'};
      return(
          <body id="body">
          <div className="loginpage">
-            <img src="https://i.ibb.co/tm1LGSz/image.png" className="imgstyle"/>
+            <img src="https://i.ibb.co/tm1LGSz/image.png" alt="img is loading" className="imgstyle"/>
             <h2 className="loginh2-1">For H4ck3r5</h2>
             <div> 
             <Grid className="panestyle">

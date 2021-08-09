@@ -3,8 +3,8 @@ import {gql} from 'graphql-tag'
 import {Button,Icon} from 'semantic-ui-react'
 import {useMutation} from 'react-apollo'
 
-function DeleteButton(postId){
-    var postId = postId.postId
+function DeleteButton(postid){
+    var postId = postid.postId
     const [deletepost] = useMutation(DELETE_POST,{
         update(){
 
@@ -13,7 +13,7 @@ function DeleteButton(postId){
             postId
         }
     })
-    console.log(postId)
+  //  console.log(postId)
     return(
         <Button as="div" color="red" floated="right" onClick={deletepost}>
             <Icon name="trash" />

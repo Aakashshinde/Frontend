@@ -1,9 +1,8 @@
-import React, { useContext,Fragment } from 'react'
+import React, {Fragment } from 'react'
 import {gql} from 'graphql-tag'
 import {Grid,Transition} from 'semantic-ui-react'
 import PostCard from '../components/PostCard'
 import {Query} from 'react-apollo'
-import AuthContext from '../context/auth'
 import PostForm from '../components/PostForm'
 function Posts(){
     return(

@@ -23,7 +23,7 @@ function Rooms(){
             ({loading,error,data})=>{
               if(loading) return <h1>Loading</h1>
               if(error) console.log(error)
-              console.log(data)
+              
               return <Fragment className="roomcard">{
                  data.getRooms.map(room=>(
             <Grid.Column key={room.id}>
@@ -52,7 +52,6 @@ function Rooms(){
             ({loading,error,data})=>{
               if(loading) return <h1>Loading</h1>
               if(error) console.log(error)
-              console.log(data)
               return <Fragment className="roomcard">{
                  data.getRooms.map(room=>(
             <Grid.Column key={room.id}>
