@@ -19,7 +19,7 @@ function RoomCard({room:{id,name,createdAt}}){
           component="img"
           alt="Contemplative Reptile"
           height="140"
-          image="https://blogs.unity3d.com/wp-content/uploads/2019/05/image1-11.png"
+          image="https://i.ibb.co/ZHFt0BF/wp2697274.jpg"
           title="Contemplative Reptile"
         />
         <CardContent>
