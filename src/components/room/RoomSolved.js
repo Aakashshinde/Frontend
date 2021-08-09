@@ -11,12 +11,15 @@ function RoomSolved(props){
     var roomId=room.id
     var f=0;
     const user = useContext(AuthContext);
+    {room.users.map((name)=>{
+         console.log(name.username)
+    })}
     const [values] = useState({
       roomId: roomId
       })
       const onSubmit = (event)=>{
         room.users.map((name)=>{
-         // console.log(name.username)
+      //   console.log(name.username)
           if(name.username==user.user.username){
             f=1
               localStorage.setItem('user'+roomId,1);

@@ -14,10 +14,12 @@ import {AuthProvider} from './context/auth'
 import AuthRoute from './context/AuthRoute'
 import PostsRoute from './context/PostsRoute'
 import RoomsRoute from './context/RoomsRoute'
+import ScoreRoute from './context/ScoreRoute';
 import {setContext} from 'apollo-link-context'
 import {createHttpLink} from 'apollo-link-http'
 import {InMemoryCache} from 'apollo-cache-inmemory'
 import SingleRoom from './components/room/SingleRoom'
+import ScoreBoard from './components/room/ScoreBoard'
 const httpLink = createHttpLink({
   uri:'https://fast-crag-26332.herokuapp.com/graphql'
 })
@@ -47,6 +49,7 @@ function App() {
       </Container>
       <RoomsRoute exact path='/Rooms' component={Rooms}/>
       <RoomsRoute exact path='/Rooms/:roomId' component={SingleRoom}/>
+      <ScoreRoute exact path='/Rooms/:roomId/board' component={ScoreBoard} />
     </Router>
     </ApolloProvider>
     </AuthProvider>

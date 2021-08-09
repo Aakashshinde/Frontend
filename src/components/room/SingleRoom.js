@@ -2,6 +2,7 @@ import React, { Fragment, useContext, useState } from "react";
 import { gql } from "graphql-tag";
 import { Query } from "react-apollo";
 import { graphql } from "react-apollo";
+import {Link} from 'react-router-dom'
 import { Form, Grid, Button, Label } from "semantic-ui-react";
 import { Paper, TextField, Box } from "@material-ui/core";
 import {AuthContext} from '../../context/auth'
@@ -9,6 +10,7 @@ import AddQuestion from './AddQuestion'
 import DeleteQuestion from "./DeleteQuestion";
 import { Room } from "@material-ui/icons";
 import RoomSolved from './RoomSolved'
+import ScoreBoard from "./ScoreBoard";
 function SingleRoom(props) {
   const roomId = props.match.params.roomId;
   const [values, setValues] = useState(new Map());
@@ -72,6 +74,7 @@ function SingleRoom(props) {
             return (
               <Fragment >
                 <div class="container ui">
+                <Button as={Link}  to={`/rooms/${roomId}/board`} size="small" variant="contained" color="primary" >ScoreBoard</Button>
                   {user.username=='Alpha_2018' && <AddQuestion roomId={getRoom.id} />}
                   <br></br>
                   <br></br>
