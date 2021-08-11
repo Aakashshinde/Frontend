@@ -43,6 +43,7 @@ function Home(){
                     </li>
                 </ul>
             </div>
+
             <div class="social-icons">
                 <ul>
                     <br/><br/><br/><FacebookIcon onClick={() => window.open('https://www.facebook.com/')}></FacebookIcon><br/><br/><br/>
@@ -51,7 +52,19 @@ function Home(){
                     
                 </ul>
             </div>
+            <div class="container-fluid">
+    <div class="background">
+       <div class="cube"></div>
+       <div class="cube"></div>
+       <div class="cube"></div>
+       <div class="cube"></div>
+      <div class="cube"></div>
+    </div>
+    </div>
         </div>
+        
+       
+ 
     )
 }
 
