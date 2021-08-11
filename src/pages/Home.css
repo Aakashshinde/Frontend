@@ -193,10 +193,11 @@ ul{
     display: block;
     font-size: 29px;
 }
-
-.social-icons ul li a:hover{
-    background-color: #220efb;
-    color: #fff;
+.footer {
+    background-color: black;
+    margin-top: 28%; 
+    color: white;
+    text-align: center;
 }
 
   .container-fluid{

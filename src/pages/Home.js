@@ -3,6 +3,7 @@ import './Home.css'
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import {AppBar,Container,Toolbar, Typography} from '@material-ui/core';
 
 function Home(){
     return(
@@ -61,10 +62,16 @@ function Home(){
       <div class="cube"></div>
     </div>
     </div>
+    <AppBar class="footer">
+          <Container maxWidth="md">
+            <Toolbar>
+              <Typography variant="h6">
+                © 2021 Cybersecurity Club
+              </Typography>
+            </Toolbar>
+          </Container>
+        </AppBar>
         </div>
-        
-       
- 
     )
 }
 
