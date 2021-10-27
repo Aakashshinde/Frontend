@@ -1,9 +1,6 @@
-import React, { Fragment, useContext, useState } from "react";
+import React, { Fragment } from "react";
 import { gql } from "graphql-tag";
 import { Query } from "react-apollo";
-import {Link} from 'react-router-dom'
-import { graphql } from "react-apollo";
-import { Form, Grid, Button, Label } from "semantic-ui-react";
 import './Score.css'
 
 function ScoreBoard(props){

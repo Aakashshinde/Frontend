@@ -1,16 +1,14 @@
 import React, { Fragment, useContext, useState } from "react";
 import { gql } from "graphql-tag";
 import { Query } from "react-apollo";
-import { graphql } from "react-apollo";
 import {Link} from 'react-router-dom'
-import { Form, Grid, Button, Label } from "semantic-ui-react";
-import { Paper, TextField, Box } from "@material-ui/core";
+import { Form, Grid, Button } from "semantic-ui-react";
 import {AuthContext} from '../../context/auth'
 import AddQuestion from './AddQuestion'
 import DeleteQuestion from "./DeleteQuestion";
-import { Room } from "@material-ui/icons";
+
 import RoomSolved from './RoomSolved'
-import ScoreBoard from "./ScoreBoard";
+
 function SingleRoom(props) {
   const roomId = props.match.params.roomId;
   const [values, setValues] = useState(new Map());
@@ -35,7 +33,7 @@ function SingleRoom(props) {
     
     if (values.get(name) === e.target.name) {
       document.getElementById('btn'+name).innerHTML="Correct Answer"
-      document. getElementById('btn'+name). style. backgroundColor = 'green';
+      document.getElementById('btn'+name).style.backgroundColor = 'green';
     if(localStorage.getItem(name)!=1){
       localStorage.setItem(name, 1);
       var a ={}

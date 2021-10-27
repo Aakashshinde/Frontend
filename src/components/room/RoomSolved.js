@@ -44,9 +44,7 @@ function RoomSolved(props){
 
     return(<div class="ui success message">
     <i class="close icon" onClick={onclick} hidden></i>
-     <div class="header">
             Your Successfully completed the room
-    </div>
       <p>Submit and continue hacking the next room</p>
       <Button type="submit" onClick={onSubmit}>{((localStorage.getItem('user'+roomId)==1) && 'submitted') ||((localStorage.getItem('user'+roomId)!=1) && 'submit')}</Button>
         </div>)
